@@ -3,4 +3,6 @@ git status
 git add .
 git log
 
+
+git diff
 oi
