@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Website Explicativo</title>
+		<meta name="author" content="Vinicus D. O. Gonçalves">
+		<meta name="description" content="WebSite Explicativo">
+		<meta name="keywords" content="HTML,CSS,JS,PHP,SQL">
+		<link rel="stylesheet" href="visual/css/estilo.css">
+		<script type="text/javascript">
+			function test(a){
+				document.getElementById(a).innerHTML = "nada aqui";
+			}
+		</script>
+	<head>
+	<body>
+		<header id="cabeçalho">
+			<!-- criar o cabeçalho do site -->
+			<h1 id="nada_aqui">WebSite Explicativo</h1>
+		</header>
+		<nav class="navbar">
+			<ul>
+				<li class="menu  principal"><a href="index.html">Principal</a></li>
+				<li class="menu  html"><a href="pags\html.html">HTML</a></li>
+				<li class="menu "><a href="pags\css.html">CSS</a></li>
+				<li class="menu  js" >JS</li>
+				<li class="menu ">PHP</li>
+				<li class="menu sql">SQL</li>
+			</ul>
+		</nav>
+		<!-- inicio do conteúdo -->
+		<div id="conteudo" class="conteudo">
+			<h2 class="titulo">Título</h2>
+			<p>Descrição do site</p>
+			<!-- Será adicionado mais conteúdo dependento da pagina-->
+		</div>
+		<!-- fim do conteúdo -->
+		<footer>	<a href="#conteudo">Conteúdo</a> <br> <hr>
+			Direitos reservados Vinicius D O Gonçalves - <br>
+			2017 <br>
+		<!-- Criar o rodapé do Site -->
+		<button type="button" name="button" onclick="test('nada_aqui')"  id="nada" value="">nada aqui</button>
+		</footer>
+
+	</body>
+</html>

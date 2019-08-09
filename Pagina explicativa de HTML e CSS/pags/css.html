@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Website Explicativo</title>
+		<meta name="author" content="Vinicus D. O. Gonçalves">
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<link rel="stylesheet" href="../visual/css/estilo.css">
+	</head>
+	<body>
+		<header id="cabeçalho">
+			<!-- criar o cabeçalho do site -->
+			<h1>WebSite Explicativo</h1>
+		</header>
+		<nav class="navbar">
+			<ul>
+				<li class="menu principal"><a href="../index.html">Principal</a></li>
+				<li class="menu html"><a href="html.html">HTML</a></li>
+				<li class="menu"><a href="css.html">CSS</a></li>
+				<li class="menu js">JS</li>
+				<li class="menu">PHP</li>
+				<li class="menu sql">SQL</li>
+			</ul>
+		</nav>
+		<!-- inicio do conteúdo -->
+		<div id="conteudo">
+			<div class="conteudoinici">
+      	<h2>Cascading Style sheets - CSS</h2>
+      	<p>Descreção do que é CSS</p>
+			</div>
+      <div  class="explicação"><!-- Explicação 1 -->
+        <h3>HEIGHT</h3>
+        <p>Height serve para definir a autura de um elemento.</p>
+        <h4>Valores:</h4>
+        <ul>
+          <li>O valor a se colocar em heigth pode ser em porcentagem ou em px.</li>
+        </ul>
+        <h4>Exemplo:</h4>
+        <pre>
+img{
+  height: 100px;
+  width: 20%;
+}
+        </pre>
+				<p>Executando exemplo:</p>
+				<figure>
+					<img src="https://arenapm1.files.wordpress.com/2015/04/chama2.png" width="20%" height="100px">
+				</figure>
+				<hr>
+      </div><!-- Fim da Explicação 1 -->
+      <div  class="explicação"><!-- Explicação 2 -->
+        <h3>WIDTH</h3>
+        <p>Width serve para definir a largura de um elemento.</p>
+        <h4>Valores:</h4>
+        <ul>
+          <li>O valor a se colocar em width pode ser em porcentagem ou em px.</li>
+        </ul>
+        <h4>Exemplo:</h4>
+        <pre>
+img{
+  width: 100px;
+  height:10%;
+}
+        </pre>
+				<p>Executando exemplo:</p>
+				<figure>
+					<img src="https://balaroti.static-ws.com.br/images/temp/1000_19235.jpeg" width="10%" height="100px">
+				</figure>
+				<hr>
+      </div><!-- Fim da Explicação 2 -->
+      <div  class="explicação"><!-- Explicação 3 -->
+        <h3>BACKGROUND-COLOR</h3>
+        <p>Background-­color serve para colorir determinado campo com uma cor.</p>
+        <h4>Valores:</h4>
+        <ul>
+          <li>Para dizer qual cor podemos usar é possivél usar quatro modos: Black(A cor em ingles), #ff0000(Hexadecimal),rgb(255, 0, 0)[<b>R=red,g=green,b=blue </b>;{as três cores primarias.}],rgba(255,0,0,0.5)[a=trantarencia]!</li>
+        </ul>
+        <h4>Exemplo:</h4>
+        <pre>
+body{
+  background-color:#ff0000;
+}
+        </pre>
+				<p>Executando exemplo:</p>
+				<figure>
+					<img src="https://arenapm1.files.wordpress.com/2015/04/chama2.png" width="100px" height="100px" style="background-color: #ff0000;"><br>
+					<p>Imagem transparente <b>Sem fundo</b>!</p>
+					<img src="http://s.glbimg.com/po/tt/f/original/2012/11/05/fundo_transparente.png" width="100px" height="100px" style="background-color: #ff0000;">
+				</figure>
+				<hr>
+      </div><!-- Fim da Explicação 3 -->
+      <div  class="explicação"><!-- Explicação 4 -->
+        <h3>BACKGROUND-IMAGE</h3>
+        <p>Background-image serve para colocar uma imagem em um elemento.</p>
+        <h4>Valores:</h4>
+        <ul>
+          <li>url: Local da imagem pode ser local ou externo(Link)</li>
+        </ul>
+        <h4>Exemplo:</h4>
+        <pre>
+body{
+  background-image:url(http://litbimg.rightinthebox.com/images/384x384/201609/tbim1473070944868.jpg);
+  height:100%;
+  width:100%;
+}
+        </pre>
+				<hr>
+      </div><!-- Fim da Explicação 4 -->
+      <div  class="explicação"><!-- Explicação 5 -->
+        <h3>COLOR</h3>
+        <p>Color serve colorir um determinado elemento.</p>
+        <h4>Valores:</h4>
+        <ul>
+          <li>É possivél usar os seguntes elementos para colorir determinado elemento:</li>
+					<li>rgba;</li>
+					<li>#fff000(Hexadecimal);</li>
+					<li>rgv;</li>
+					<li>black(cor em inglês).</li>
+				</ul>
+        <h4>Exemplo:</h4>
+        <pre>
+p{
+  color:rgba(255,0,0,0.8);
+}
+        </pre>
+				<p>Executado exemplo:</p>
+				<p style="color:rgba(255,0,0,0.8);">Texto vermelho</p>
+				<hr>
+      </div><!-- Fim da Explicação 5 -->
+      <div  class="explicação"><!-- Explicação 6 -->
+        <h3>FONT-SIZE</h3>
+        <p>Font­-size serve para definir o tamanho da fonte do texto.</p>
+        <h4>Valores:</h4>
+        <ul>
+          <li>O valor deve ser colocado em porcentagem.</li>
+        </ul>
+        <h4>Exemplo:</h4>
+        <pre>
+h1,h2,h3,h4,h5,h5,h6,p{
+	font-size: 50%;
+}
+        </pre>
+				<p>Executado exemplo:</p>
+				<p style="font-size: 250%;">fonte em 250%</p>
+				<hr>
+      </div><!-- Fim da Explicação 6 -->
+      <div  class="explicação"><!-- Explicação 7 -->
+        <h3>TEXT-SHADOW</h3>
+        <p>Text­-shadow serve para adicionar sombra a um texto.</p>
+        <h4>Valores:</h4>
+        <ul>
+          <li>Os dois primerois valores é a distancia que se estende a sombra.</li>
+					<li>O primero valor quando positivo vai para direita e negativo para esquerda.</li>
+					<li>O segundo valor quando positivo vai para baixo e negativo para cima.</li>
+					<li>O terceiro valor é a cor da sombra.</li>
+        </ul>
+        <h4>Exemplo:</h4>
+        <pre>
+p{
+  text-shadow: 2px 2px #ff0000
+}
+        </pre>
+				<p>Executado exemplo:</p>
+				<p style="text-shadow: 2px 2px #ff0000;">Texto com sombra</p>
+				<hr>
+      </div><!-- Fim da Explicação 7 -->
+      <div  class="explicação"><!-- Explicação 8 -->
+        <h3>MARGIN</h3>
+        <p>Margin serve para criar espaço em torno de elementos.</p>
+        <h4>Valores:</h4>
+        <ul>
+          <li>O os valores podem ser colocados em px.</li>
+					<li>50px 25px 10px 5px;(Margem superior é 50px, margem direita é 25px, margem inferior é 10px, margem esquerda é 5px)</li>
+					<li>50px 25px 10px;(Margem superior é 50px, margem direita e esquerda são 25px, Margem inferior é 10px)</li>
+					<li>50px 25px;(Margens superior e inferior são 50px, margem direita e esquerda são 25px)</li>
+					<li>50px;(Todas as quatro margens são 50px)</li>
+        </ul>
+        <h4>Exemplo:</h4>
+        <pre>
+p{
+	margin: 50px 25px 10px 5px;
+	margin: 50px 25px 10px;
+	margin: 50px 25px;
+	margin: 50px;
+	margin-top: 50px;
+	margin-right: 25px;
+	margin-bottom: 10px;
+	margin-left: 25px;
+}
+        </pre>
+				<p>Executado exemplo:</p>
+				<p style="margin:50px 25px 10px 5px;">Texto 50px superior, 25px direita, 10px inferior, 5px esquerda.</p>
+				<p style="margin:50px 25px 10px;">Texto 50px superior, 25px direita e esquerda, 10px inferior.</p>
+				<p style="margin:50px 25px;">Texto 50px superior e inferior, 25px direita esquerda.</p>
+				<p style="margin:50px;">Texto 50px todos os lados.</p>
+				<p style="margin-top:50px;margin-right:25px;margin-bottom:10px;margin-left:25px;">Texto 50px superior, 25px direita, 10px inferior, 25px esquerda.</p>
+				<hr>
+      </div><!-- Fim da Explicação 8 -->
+      <div  class="explicação"><!-- Explicação 9 -->
+        <h3>padding</h3>
+        <p>padding serve para gerara espaços em torno do conteúdo.</p>
+        <h4>Valores:</h4>
+        <ul>
+					<li>O os valores podem ser colocados em px.</li>
+					<li>50px 25px 10px 5px;(O valor superior é 50px, o valor  direita é 25px, o valor  inferior é 10px, o valor  esquerda é 5px)</li>
+					<li>50px 25px 10px;(O valor  superior é 50px, o valor  direita e esquerda são 25px, o valor  inferior é 10px)</li>
+					<li>50px 25px;(O valor superior e inferior são 50px, o valor direita e esquerda são 25px)</li>
+					<li>50px;(Todas as quatro margens são 50px)</li>
+        </ul>
+        <h4>Exemplo:</h4>
+        <pre>
+div{
+	padding: 50px 25px 10px 5px
+}
+        </pre>
+				<p>Executando exemplo:</p>
+				<p style="padding:50px;">Texto com 50px em todos os lados.</p>
+				<hr>
+      </div><!-- Fim da Explicação 9 -->
+      <div  class="explicação"><!-- Explicação 10 -->
+        <h3>BOX-SHADOW</h3>
+        <p>box-shadow serve para colocar uma sombra em um elemento.</p>
+        <h4>Valores:</h4>
+        <ul>
+          <li>É estruturado por cinco valores:</li>
+          <li>O primeiro quando positivo a sombra vai para direita e negativo para esquerda./10px</li>
+          <li>O segundo quando positivo a sombra vai para baixo e negativo para cima./5px</li>
+					<li>O terceiro é a transparencia da sombra quanto maior o valor mais transparente fica./7px</li>
+          <li>O quarto é o tamanho da sombra./0px</li>
+          <li>O quinto é a cor da sombra./#999999(Hexadecimal)</li>
+        </ul>
+        <h4>Exemplo:</h4>
+        <pre>
+nav{
+	box-shadow: 0px 5px 10px 0px #ff0000;
+}
+        </pre>
+				<hr>
+      </div><!-- Fim da Explicação 10 -->
+      <div  class="explicação"><!-- Explicação 11 -->
+        <h3>BORDER</h3>
+        <p>Border serve para definir a borda de eum elemento.</p>
+        <h4>Valores:</h4>
+        <ul>
+          <li>X: Explicação/Exemplos.</li>
+        </ul>
+        <h4>Exemplo:</h4>
+        <pre>
+div{
+	border: 5px solid red;
+}
+        </pre>
+				<hr>
+      </div><!-- Fim da Explicação 11 -->
+      <div  class="explicação"><!-- Explicação 12 -->
+        <h3>MAX-HEIGHT</h3>
+        <p>Maxheight serve para definir a autura maxima de um elemento.</p>
+        <h4>Valores:</h4>
+        <ul>
+          <li>O valor do max-height poder ser em px ou em porcentagem.</li>
+        </ul>
+        <h4>Exemplo:</h4>
+        <pre>
+div{
+	max-height: 100px;
+	max-width: 500px;
+}
+        </pre>
+				<hr>
+      </div><!-- Fim da Explicação 12 -->
+      <div  class="explicação"><!-- Explicação 13 -->
+        <h3>MAX-WIDTH</h3>
+        <p>max-width serve para definir a largura maxima de um elemento.</p>
+        <h4>Valores:</h4>
+        <ul>
+          <li>O valor do max-width poder ser em px ou em porcentagem, serve mais para sites para celulares.</li>
+        </ul>
+        <h4>Exemplo:</h4>
+        <pre>
+div{
+	max-width: 500px;
+	max-height: 100px;
+}
+        </pre>
+				<hr>
+      </div><!-- Fim da Explicação 13 -->
+			<div  class="explicação"><!-- Explicação 14 -->
+        <h3>FLOAT</h3>
+        <p>Float serve para serve para especificar se um elemento deve ou não flutuar.</p>
+        <h4>Valores:</h4>
+        <ul>
+          <li>X: Explicação/Exemplos.</li>
+        </ul>
+        <h4>Exemplo:</h4>
+        <pre>
+img,div,h3{
+	float: left;
+	float: right;
+}
+        </pre>
+				<hr>
+      </div><!-- Fim da Explicação 14 -->
+      <div  class="explicação"><!-- Explicação 15 -->
+        <h3>CLEAR</h3>
+        <p>Clear serve para controlar o comportamento elementos flutuantes.</p>
+        <h4>Valores:</h4>
+        <ul>
+          <li>X: Explicação/Exemplos.</li>
+        </ul>
+        <h4>Exemplo:</h4>
+        <pre>
+div{
+	clear: left;
+	clear: right;
+}
+        </pre>
+				<hr>
+      </div><!-- Fim da Explicação 15 -->
+      <div  class="explicação"><!-- Explicação 16 -->
+        <h3>DISPLAY</h3>
+        <p>O display serve para dizer como um elemento é exibido.</p>
+        <h4>Valores:</h4>
+        <ul>
+          <li>inline:Um elemento linha que fica do tamanho exato do elemento.</li>
+          <li>block:O elemento bloco, usa todo espaço para direira ou esquerda de sue elemento pai(O elemento que ele está dentro!).</li>
+          <li>flex:Serve para fazer os elementos dentro do elemento pai flutuaren.</li>
+          <li>inline-block:O inline-block se comporta como linha e bloco, ou seja .</li>
+        </ul>
+        <h4>Exemplo:</h4>
+        <pre>
+li{
+	display:inline-block;
+}
+
+        </pre>
+				<hr>
+      </div><!-- Fim da Explicação 16 -->
+    </div>
+		<nav>
+			<a href="#conteudo" class="rodape navdown">Conteúdo</a>
+			<a href="#cabeçalho" class="navtop"><button type="button" name="button">Topo</button></a>
+			<br> <hr>
+		</nav>
+		<footer class="rodape">
+			Direitos reservados Vinicius D O Gonçalves -
+			2017 <br>
+		<!-- Criar o rodapé do Site -->
+		</footer>
+	</body>
+</html>

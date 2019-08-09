@@ -1,0 +1,120 @@
+/*
+Autor: Vinicius D. O. Gonçalves
+Data de criação:24/05/2017
+Data de atualização:09/06/2017
+Descrição: Estilo do Website explicativo
+*/
+html,body{
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-image: url("../imagens/arvore.jpg");
+  background-size: auto;/*display block*/
+  background-attachment: fixed;
+  color:#ffffff;
+}
+#cabeçalho h1{
+  width: 415px;
+  margin: 70px auto 50px auto;
+  font-size: 300%;
+}
+.navbar{
+  padding-top: 10px;
+  height: 35px;
+  width: 405px;
+  background-color: #ffffff;
+  margin: 0px auto 50px;
+  box-shadow: 0px 5px 10px 0px #999999;
+}
+
+.navbar ul{
+  margin: 0px;
+  height: 50px;
+  padding-left: 0px;
+  width: 405px;
+  text-align: center;
+}
+
+.menu{
+  margin: 0 5px 0 5px;
+  display: block;
+  color: #000000;
+  display: inline-block;
+  width: 45px;
+  font-size: 140%;
+}
+
+.menu a{
+  transition: 5s;
+  color:#000000;
+  text-decoration: none;
+}
+
+.navbar a:hover{
+  transition: 3s;
+  color: #ff0000;
+}
+.principal{
+   width: 90px;
+}
+.html{
+  width: 70px;
+}
+.js{
+  width: 30px;
+}
+.sql{
+}
+#conteudo{
+
+  max-width:90%;
+  margin: 10px;
+  padding-left: 20px;
+}
+.conteudoinici{
+  font-size:  150%;
+  margin: 25px 10px;
+  padding: 10px 0px 5px 10px;
+  border-left:5px solid  rgba(255, 0, 0, 0.9);
+  background-color:rgba(0, 0, 0, 0.75);
+}
+.conteudo{
+  margin: 0 25% 0;
+}
+.titulo{
+  font-size: 250%;
+  width: 105px;
+  margin: 50px auto 50px auto;
+  clear: left;
+}
+.conteudo p{
+  font-size: 150%;
+}
+.explicação{
+  margin: 25px 10px;
+  padding: 10px 0px 5px 10px;
+  border-left: 5px solid rgba(255, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.navtop {
+  position: fixed;
+  top: 10px;
+  left: 95%;
+}
+
+h1,h2,h3,h4,h5,h5{
+  margin: 0;
+  padding: 0;
+}
+.img{
+  background-color: #ffffff;
+}
+.rodape{
+  margin: 10px 0 20px 20px;
+}
+.navdown{
+  text-decoration: none;
+  color: #ffffff;
+}
