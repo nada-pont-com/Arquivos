@@ -18,8 +18,8 @@ public class NovatoEmJava {
 		JOptionPane.showMessageDialog(null, "O resultado é: "+resultado, "Soma Basica", JOptionPane.INFORMATION_MESSAGE);
 		*/
 		/*
-		String nome  = "Vinicius";
-		String sobrenome = "Gonçalves";
+		String nome  = "Nome";
+		String sobrenome = "Sobrenome";
 		String nomeCompleto = nome + " " + sobrenome;
 		JOptionPane.showMessageDialog(null, nomeCompleto);
 		*/
