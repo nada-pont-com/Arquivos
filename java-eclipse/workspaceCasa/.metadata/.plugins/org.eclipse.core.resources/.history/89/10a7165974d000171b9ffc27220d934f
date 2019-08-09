@@ -1,0 +1,224 @@
+package interfacegrafica;
+
+
+import classesobjetoscasa.Casa;
+import classesobjetoscasa.Janela;
+import classesobjetoscasa.Porta;
+import javax.swing.JOptionPane;
+import java.util.ArrayList;
+import java.util.List;
+import javax.swing.JComboBox;
+
+public class MenuOpcoes {
+	//Declareção do método dinâmico ExibirMenu().
+	public void exibirMenu() {
+		//Criando o objeto casa e instanciando-o para a classe Casa.
+		Casa casa = new Casa();
+		//Criando o menu de opções
+		while (true) {
+			int acao = Integer.parseInt(JOptionPane.showInputDialog("Escolha uma das opção : \n"
+					+ "1 - Construir Casa \n"
+					+ "2 - Pintar Casa \n"
+					+ "3 - Mover Porta(s) \n"
+					+ "4 - Mover Janela \n"
+					+ "5 - Informações da Casa \n"
+					+ "6 - Sair"));
+			switch(acao) {
+			/*
+			 * Caso a opção escolhida seja 1, chamar o método que permitirá fazermos as entradas
+			 * necessárias para a construção da casa. 
+			 */
+			case 1:
+				dadosConstCasa(casa);
+			break;
+			case 2:
+				pintarCasa(casa);
+			break;
+			case 3:
+				moverPorta(casa);
+			break;
+			case 4:
+				moverJanela(casa);
+			break;
+			case 5:
+				informacoesCasa(casa);
+			break;
+			case 6:
+				System.exit(0);
+			break;
+			default:
+				JOptionPane.showMessageDialog(null,"Opção Inexistente","Erro",JOptionPane.ERROR_MESSAGE);
+			break;
+			}//Término do switch()
+		}//Término do while()
+	}//Término método exibirMenu()
+	private void dadosConstCasa(Casa casa) {
+		//Entrada de dados
+		String descricao = JOptionPane.showInputDialog("Descrição da casa: ");
+		String cor = JOptionPane.showInputDialog("Informe a cor da casa: ");
+		int quantidadePortas = Integer.parseInt(JOptionPane.showInputDialog("Informe quantas portas: "));
+		int quantidadeJanelas = Integer.parseInt(JOptionPane.showInputDialog("Informe quantas janelas"));
+		//Declaração do array listaDeJanelas
+				List<Janela> listaDeJanelas = new ArrayList<Janela>();
+		for (int i = 0; i < quantidadeJanelas;i++) {
+				listaDeJanelas.add(solicitarJanelas(i));
+		}
+		
+		//Decleração do arry listaDePortas
+				List<Porta> listaDePortas = new ArrayList<Porta>();
+		for (int c = 0; c < quantidadePortas;c++) {
+			listaDePortas.add(solicitarPortas(c));
+		}
+		//Armazena os valores das entradas nos atributos do objeto casa
+		casa.construirCasa(descricao,cor,listaDeJanelas,listaDePortas);
+		
+		//Imprime no controe os valores dos atributos do objeto casa
+		
+	}//Término do método dadosConstCasa()
+	
+	/*
+	 * Ométodo pintarCasa() produz uma entrada de dados para receber a cor 
+	 * que o usuário deseja para casa. Na segquêcia, repassa essa cor para
+	 * o método pirtarCasa, localizado na classe Casa, por meio do objeto casa.  
+	 */
+	private void pintarCasa(Casa casa) {
+		if(casa.getCor()==null) {
+			JOptionPane.showMessageDialog(null, "Não tem uma casa!");
+		}else {
+			String cor = JOptionPane.showInputDialog("Digite a cor da casa: ");
+			casa.pintarCasa(cor);
+		}
+	}
+	
+	private void moverPorta(Casa casa) {
+		if (casa.getListaDePortas()== null) {
+			JOptionPane.showMessageDialog(null,"A casa não tem porta(s)!","Erro",JOptionPane.ERROR_MESSAGE);
+		} else {
+			JOptionPane.showMessageDialog(null, "A casa tem porta(s)!","Ok",JOptionPane.INFORMATION_MESSAGE);
+			List list = new ArrayList();
+			
+			for (Porta porta : casa.getListaDePortas()) {
+				list.add(porta.getIdentificacao());
+			}
+			
+			JComboBox field1 = new JComboBox(list.toArray());
+			String[] listStatus = {"Aberta", "Fechada"};
+			JComboBox field2 = new JComboBox(listStatus);
+			
+			Object[] message = {"Porta: ", field1, "Status: ",field2};
+			int option = JOptionPane.showConfirmDialog(null,message, "Porta",JOptionPane.OK_CANCEL_OPTION);
+			
+			if(option == JOptionPane.OK_OPTION) {
+				int status;
+				if(field2.getSelectedIndex() == 0) {
+					status = 1;
+				}else {
+					status = 2;
+				}
+				casa.movimentarPorta(field1.getSelectedIndex(),status);
+			}
+			
+		}
+	}
+	private void moverJanela(Casa casa) {
+		if (casa.getListaDeJanelas()== null) {
+			JOptionPane.showMessageDialog(null,"A casa não tem janela(s)!","Erro",JOptionPane.ERROR_MESSAGE);
+		} else {
+			JOptionPane.showMessageDialog(null, "A casa tem janela(s)!","Ok",JOptionPane.INFORMATION_MESSAGE);
+			List list = new ArrayList();
+			
+			for (Janela janela : casa.getListaDeJanelas()) {
+				list.add(janela.getIdentificacao());
+			}
+			
+			JComboBox field1 = new JComboBox(list.toArray());
+			String[] listStatus = {"Aberta", "Fechada"};
+			JComboBox field2 = new JComboBox(listStatus);
+			
+			Object[] message = {"Janela: ", field1, "Status: ",field2};
+			int option = JOptionPane.showConfirmDialog(null,message, "Janela",JOptionPane.OK_CANCEL_OPTION);
+			
+			if(option == JOptionPane.OK_OPTION) {
+				int status;
+				if(field2.getSelectedIndex() == 0) {
+					status = 1;
+				}else {
+					status = 2;
+				}
+				casa.movimentarJanela(field1.getSelectedIndex(),status);
+			}
+			
+		}
+	}
+	
+	private void informacoesCasa(Casa casa) {
+		if((casa.getListaDeJanelas()==null)||(casa.getListaDePortas()==null)) {
+			JOptionPane.showMessageDialog(null,"A casa não tem janela(s) ou porta(s)!","Erro",JOptionPane.ERROR_MESSAGE);
+		}else {
+			String tudo = "";
+			int cont = 0;
+			tudo += "Descrição da casa: "+casa.getDescricao()+"\n"+"Cor da casa: "+casa.getCor()+"\n";
+			for (Janela janela : casa.getListaDeJanelas()) {
+				cont ++;
+				tudo += "Descrição da "+cont+"ª janela: "+janela.getIdentificacao()+"\n";
+				tudo += "Status da "+cont+"ª janela: "+janela.getStatus()+"\n";
+			}
+			cont = 0;
+			for (Porta porta: casa.getListaDePortas()) {
+				cont++;
+				tudo += "Descrição da "+cont+"ª porta: "+porta.getIdentificacao()+"\n";
+				tudo += "Status da "+cont+"ª porta: "+porta.getStatus()+"\n";
+
+			}
+			JOptionPane.showMessageDialog(null,tudo);
+				
+		}
+	}
+	
+	
+	private Janela solicitarJanelas(int i) {
+		//Crai o objeto apontando para a instancia da classe Janela
+		Janela janela = new Janela();
+		//Incremanta a variável i de i
+		i = i+1;
+		String identificacao = JOptionPane.showInputDialog("Digite a descrição da janela " + (i) + ": ");
+		int status = Integer.parseInt(JOptionPane.showInputDialog("Digite o status da janela " + identificacao
+				+ "\n 1 para aberta \n 2 Para fechada: "));
+		
+		/*
+		 * Chama o método setIdenticacao, passando como parâmetro a descrição
+		 * recebida da janela atual para que ela seja armasenada no atributo
+		 * identificacao da classe Janela
+		 */
+		janela.setIdentificacao(identificacao);
+		/*
+		 * Chama o método setStatus de acordo com o status informado pelo usuario,
+		 * repassando como parâmetro o valor a ser armazenado no atributo status
+		 * da classe Janela
+		 */
+		if (status == 1) {
+			janela.setStatus(1);
+		}else {
+			janela.setStatus(2);
+		}
+		
+		
+		
+	
+		return janela;
+	}//Término do método solicitarJanelas()
+	private Porta solicitarPortas(int c) {
+		Porta porta = new Porta();
+		c++;
+		String identificacao = JOptionPane.showInputDialog("Digite a descrição da porta " + (c) + ": ");
+		int status = Integer.parseInt(JOptionPane.showInputDialog("Digite o status da porta " + identificacao
+				+ "\n 1 para aberta \n 2 Para fechada: "));
+		porta.setIdentificacao(identificacao);
+		if(status==1)
+			porta.setStatus(1);
+		else
+			porta.setStatus(2);
+
+		return porta;
+	}//Término do método solicitarPortas()
+}//Término classe MenuOpcoes

@@ -1,0 +1,27 @@
+package interfacegrafica;
+import javax.swing.JOptionPane;
+
+import classeobjetocarro.Carro;
+public class Fabrica {
+	public void menu() {  
+		Carro carro = new Carro();
+		
+		while(true) {
+			int acao = Integer.parseInt(JOptionPane.showInputDialog("Escolha uma das opções: \n"
+					+ "1 - Fabricar carro\n"
+					+ "2 - Vender carro\n"
+					+ "3 - Sair"));
+			
+			switch(acao) {
+			case 1:
+				
+			break;
+			case 2:
+			case 3:
+				System.exit(0);
+			break;
+			}
+			
+		}
+	}
+}

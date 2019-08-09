@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Vinicius D. O. Gonçalves">
+    <meta name="description" content="JavaScript2_1">
+    <meta name="keywords" content="JavaScript2_1, JavaScript, js">
+    <link rel="stylesheet" href="layout/css/estilo.css">
+    <title>JS2_1</title>
+    <script src="javaScript/javaScript.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>FLFi - Controle de estoque Maтpëшкa</h1>
+    </header>
+    <img src="layout/imagens/original.jpg" alt="" class="logo">
+    <div class="corpo">
+      <form name="frmquantiValor" action="#" method="post" class="estoque">
+        <div class="entrada">
+          <h3>Entrada no estoque</h3>
+          <table> 
+            <tbody>
+              <tr>
+                <td>Quantidade</td>
+                <td><input type="text" name="txtquanti" value="" placeholder="Ex:1"></td>
+              </tr>
+              <tr>
+                <td>Valor unitário</td>
+                <td><input type="text" name="txtvalor" value=""  placeholder="Ex:1.99"></td>
+              </tr>
+              <tr>
+                <td><button type="reset" name="btnresetar">Resetar</button></td>
+                <td><button type="button" name="btnenviar" onclick="estoque()">Enviar</button></td>
+              </tr>
+            </tbody>
+          </table>
+          </div>
+          <div>
+          <h3>Consultas</h3>
+          <table>
+            <tbody>
+              <tr>
+                <td><button type="button" name="btnvalor" class="btnconsulta" onclick="valor()">Consultar Valor em Estoque</button></td>
+              </tr>
+              <tr>
+                <td><button type="button" name="btnquanti" class="btnconsulta" onclick="quanti()">Consultar Quantidade em Estoque</button></td>
+              </tr>
+              <tr>
+                <td><button type="button" name="btnvalorQuanti" class="btnconsulta" onclick="valorQuanti()">Consultar Valor/Quantidade em Estoque</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </form>
+      <div class="zerar">
+        <button type="button" name="btnreset" class="btnreset" onclick="zerar()">Zerar Valor e Quantidade em Estoque</button>
+      </div>
+    </div>
+  </body>
+</html>

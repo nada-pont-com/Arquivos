@@ -1,0 +1,8 @@
+package interfacegrafica;
+import classeobjetocarro.Carro;
+public class Fabrica {
+	public void menu() {  
+		Carro carro = new Carro();
+		
+	}
+}

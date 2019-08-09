@@ -1,0 +1,77 @@
+package classesobjetoscasa;
+import java.util.List;
+
+import javax.swing.plaf.synth.SynthStyle;
+public class Casa {
+	//Declaração dos atributos da classe.
+	private String descricao;
+	private String cor;
+	private List<Porta> listaDePortas;
+	private List<Janela> listaDeJanelas;
+
+	//Armazenando o valor recebido para a descricao da casa
+	public String getDescricao() {
+		return this.descricao;
+	}
+	//Recebe o valor enviado para a descricao da casa
+	public void setDescricao(String descricao) {
+		this.descricao = descricao; 
+	}
+	//Aramazenando o valor recebidp para a cor da casa
+	public String getCor() {
+		return this.cor;
+	}
+	//Recebe o valor enviado para a cor da casa
+	public void setCor(String cor) {
+		this.cor = cor;
+	}
+	//Aramazenando o valor recebidp para a descrição e status da(s) porta(s) da casa
+	public List<Porta> getListaDePortas(){
+		return this.listaDePortas;
+	}
+	//Recebe o valor enviado para a descrição e status da(s) porta(s) da casa
+	public void setListaDePortas(List<Porta> listaDePortas){
+		this.listaDePortas = listaDePortas;
+	}
+	//Aramazenando o valor recebidp para a descrição e status da(s) janela(s) da casa
+	public List<Janela> getListaDeJanelas() {
+		return this.listaDeJanelas;
+	}
+	//Recebe o valor enviado para a descrição e status da(s) janela(s) da casa
+	public void setListaDeJanelas(List<Janela> listaDeJanelas) {
+		this.listaDeJanelas = listaDeJanelas;
+	}
+	/*
+	 * O método construirCasa() está preparado para receber a lista de Janelas(descrição,status),
+	 * lista de portas(descrição,status), cor e descrição da casa. Observe que após receber os
+	 * valores da casa, estes são repassadas para os seus respectivos métodos de armazenamento,
+	 * setListaDeJanelas(), setListaDeJanelas(), setCor(), setDescricao().
+	 */
+	
+	public void construirCasa(String descricao,String cor, List<Janela> listaDeJanelas, List<Porta> listaDePortas) {
+		setDescricao(descricao);
+		setCor(cor);
+	 	setListaDeJanelas(listaDeJanelas);
+	 	setListaDePortas(listaDePortas);
+	}
+	/*
+	 * O método abaixo recebe a cor informada pelo usuário e na aeguemcia
+	 * o redireciona para o metodo setCor(), para que este o armazene no atributo cor.
+	 */
+	public void pintarCasa(String cor) {
+		setCor(cor);
+	}
+	
+	public void movimentarPorta(int index, int status) {
+		Porta porta = listaDePortas.get(index);
+		porta.setStatus(status);
+		listaDePortas.set(index, porta);
+	}
+	
+	public void movimentarJanela(int index, int status) {
+		Janela janela = listaDeJanelas.get(index);
+		janela.setStatus(status);
+		listaDeJanelas.set(index, janela);
+	}
+	
+}//Término da classe Casa

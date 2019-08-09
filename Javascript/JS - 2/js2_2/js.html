@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="software que tem como objetivo fazero cadastro de pessoas físicas">
+    <meta name="keywords" content="SRPF">
+    <meta name="author" content="Equipe ES">
+    <script src="javaScript/js.js"></script>
+    <title>js2-2</title>
+  </head>
+  <body>
+    <h1>SRPF</h1>
+    <form name="frmcadfuncionario">
+        <table>
+          <tr>
+            <td>Funcionário:</td>
+            <td><input type="text" name="txtnome"></td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <button type="reset" name="btnlimpar">Limpar</button>
+              <button type="button" name="btncadastrar" onclick="cadastrarFuncionarios()">Cadastrar</button>
+            </td>
+          </tr>
+        </table>
+        <button type="button" name="btnvisualizar" onclick="visualizarFuncionarios()">Visualizar Lista de Funcionários</button>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="vinicius D O Gonçalves">
+    <meta name="description" content="T18 JavaScript - parte 1 - 7">
+    <meta name="keywords" content="JS, javascript, JS!=java">
+    <title>JavaScript</title>
+    <script>
+      var produto, texto, valorvezes, valor, valorfinal, opcao, valortotal, vezes;
+      valortotal = 0;
+      do {
+        produto = prompt("Insira o produto!");
+        valor = parseFloat(prompt("Incira o valor do " + produto + "."));
+        valortotal = valor + valortotal;
+        opcao = confirm("deseja continuar");
+      } while (opcao == true);
+        alert("Escolha um dos seguintes modos de pagamento");
+        alert("1-Cheque;");
+        alert("2-Cartão de credito;");
+        alert("3-Pagamento em boleto;");
+        alert("4-Pagamento em dinheiro.");
+        opcao = prompt("Digite um dos modos de pagamento!('1','2','3','4')");
+        switch (opcao) {
+          case "1":
+              texto = "Cheque";
+              vezes = parseInt(prompt("Você deseja parcelar em quantas vazes? maximo 5 vezes!"));
+              valorvezes = valortotal/vezes;
+              valorfinal = valortotal;
+            break;
+          case "2":
+          texto = "Cartão de credito";
+              vezes = parseInt(prompt("Você deseja parcelar em quantas vazes? maximo 12 vezes!"));
+              valorvezes = valortotal/vezes;
+              if (vezes > 1) {
+                valorfinal = valortotal + (valortotal * 0.05);
+              }
+            break;
+          case "3":
+            texto = "Boleto";
+              vezes = 1;
+              alert("a vista com 12% de desconto no valor total!");
+              valorfinal = valortotal - (valortotal * 0.12);
+            break;
+          case "4":
+              texto = "Dinheiro";
+              vezes = 1;
+              alert("Valores a cima de R$300 com 5% de desconto!");
+              if (valortotal > 300) {
+                valorfinal = valortotal - (valortotal * 0.05);
+              }else {
+                valorfinal = valortotal;
+              }
+
+            break;
+          default:
+            alert("Erro, modo selecionado errado!");
+        }
+        alert("O valor total do produto é :"+ valortotal + ".");
+        alert("Modo de pagamento: "+ texto + ".");
+        if (vezes !== 1) {
+          alert("A quantidade de parcelas é: " + vezes + ".");
+          alert("Valor de cada parcela é: " + valorvezes + ".");
+        }
+        alert("Valor final é: " + valorfinal + ".");
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

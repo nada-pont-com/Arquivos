@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="vinicius D O Gonçalves">
+    <meta name="description" content="T18 JavaScript - parte 1 - 3">
+    <meta name="keywords" content="JS, javascript, JS!=java">
+    <title>JavaScript</title>
+    <script>
+      var placa, text;
+      placa = parseFloat(prompt("Digite o último numero da sua placa:"));
+      text = "Seu carro não pode sair nas ";
+      switch (placa) {
+        case 0:
+        case 5:
+          alert(text + "segundas-feiras!");
+          break;
+        case 1:
+        case 6:
+          alert(text + "terças-feiras!");
+          break;
+        case 2:
+        case 7:
+          alert(text + "quartas-feiras!");
+          break;
+        case 3:
+        case 8:
+          alert(text + "quintas-feiras!");
+          break;
+        case 4:
+        case 9:
+          alert(text + "sextas-feiras!");
+          break;
+        default:
+        alert("Erro numero de placa incorreto por favor verificar se colocou o último digito!");
+        alert("Número da placa digitado: " + placa);
+      }
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

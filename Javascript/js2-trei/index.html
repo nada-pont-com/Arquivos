@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JS2</title>
+    <script src="js.js"></script>
+  </head>
+  <body>
+    <form class="" name="frmteste" action="#" method="post" onsubmit="return validaTeste()">
+      Nome: <input type="text" name="txtnome" value=""> <br>
+      Telefone: <input type="text" name="txttelefone" value=""> <br>
+      Senha: <input type="password" name="pwdsenha" value=""> <br>
+      <button type="submit" name="btnenviar">Enviar</button>
+    </form>
+    <br>
+    <br>
+    <br>
+    <br>
+    <form class="" name="frmcalculadora" action="#" method="post">
+      Número 1: <input type="text" name="txtn1" value=""> <br>
+      Número 2: <input type="text" name="txtn2" value=""> <br>
+      Operação:
+      <select name="setop">
+        <option value="+">+</option>
+        <option value="-">-</option>
+      </select>
+      <br>
+      <button type="button" name="btncalcular" onclick="calcular()">Calcular</button> <br>
+      Resultado<input type="txt" name="txtresultado" readonly>
+
+    </form>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="vinicius D O Gonçalves">
+    <meta name="description" content="T18 JavaScript - parte 1 - 5">
+    <meta name="keywords" content="JS, javascript, JS!=java">
+    <title>JavaScript</title>
+    <script>
+    var pessoas, peso, entrar, pesototal;
+    pessoas = 0;
+    pesototal = 0;
+    do {
+      peso = parseFloat(prompt("Digite o peso da pessoa que entrou!(Kg)"));
+      pesototal = peso + pesototal;
+      pessoas = 1 + pessoas;
+      if (pessoas <7) {
+        if (pesototal <= 560) {
+          entrar = confirm("Vai entrar mais alguem no elevador?");
+        }else {
+          alert("Peso maximo exedido!");
+          entrar = false;
+        }
+      }else {
+        alert("Número de pessoas maximas já alcansado. Por Favor pegue o proximo elevador");
+        entrar = false;
+      }
+    } while (entrar == true);
+    if ((pessoas <8) && (pesototal<=560)) {
+      alert("A " + pessoas + " pessoas no elevador");
+      alert("Da um peso total de  " + pesototal + "Kg.");
+    }
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

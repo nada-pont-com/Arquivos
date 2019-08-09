@@ -1,0 +1,61 @@
+/*
+Author: Vinicius D. O Gonçalves
+Data de criação:20/06/2017
+Data de atualização:21/06/2017
+*/
+body{
+  margin: 0;
+  padding: 0;
+}
+
+h1,h2,h3,h4,h5,h6{
+  margin: 0;
+  padding: 0;
+}
+header{
+  margin: 10px 10px 0px;
+  float: left;
+  font-size: 150%;
+}
+
+img.logo{
+  margin:5px 10px;
+  float: right;
+  width: 50px;
+  height: 90px;
+}
+
+div.corpo{
+  font-size: 120%;
+  clear: left;
+}
+
+form.estoque div{
+  margin: 25px 15px 10px;
+}
+
+div.corpo form.estoque{
+  display: flex;
+}
+
+form.estoque div.entrada{
+  margin-left: 100px;
+  padding: 10px;
+  box-shadow: 0 0 0px 2px #000;
+}
+
+button.btnconsulta{
+  background-color: #0039b9;
+  color: #fff;
+  font-size: 110%;
+  width: 100%;
+}
+.zerar{
+
+  margin: 10px 19%;
+}
+
+button.btnreset{
+  background-color: #ff0000;
+  font-size: 110%;
+}

@@ -1,0 +1,7 @@
+package interfacegrafica;
+
+public class Fabrica {
+	public void menu() {  
+		
+	}
+}

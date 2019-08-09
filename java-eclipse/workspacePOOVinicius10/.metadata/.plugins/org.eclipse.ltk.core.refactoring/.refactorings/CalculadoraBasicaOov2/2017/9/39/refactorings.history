@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;prokcalversao2&apos; to &apos;projcalcversao2&apos;&#x0D;&#x0A;- Original project: &apos;CalculadoraBasicaOov2&apos;&#x0D;&#x0A;- Original element: &apos;CalculadoraBasicaOov2/src/prokcalversao2&apos;&#x0D;&#x0A;- Renamed element: &apos;CalculadoraBasicaOov2/src/projcalcversao2&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;prokcalversao2&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;prokcalversao2" name="projcalcversao2" qualified="false" references="true" stamp="1506358809210" textual="false" version="1.0"/>
+</session>
